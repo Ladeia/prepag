@@ -18,7 +18,7 @@ public class Card implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private String holderName;
-	private String cardNumber;
+	private long cardNumber;
 	private String cardValidity;
 	private String cardPassword;
 	private Double cardBalance;
@@ -36,10 +36,10 @@ public class Card implements Serializable{
 	public void setHolderName(String holderName) {
 		this.holderName = holderName;
 	}
-	public String getCardNumber() {
+	public long getCardNumber() {
 		return cardNumber;
 	}
-	public void setCardNumber(String cardNumber) {
+	public void setCardNumber(long cardNumber) {
 		this.cardNumber = cardNumber;
 	}
 	public String getCardValidity() {
