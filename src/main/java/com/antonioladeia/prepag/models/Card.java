@@ -33,7 +33,7 @@ public class Card implements Serializable{
 	@Column(nullable = false)
 	private String holderName;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String cardNumber;
 	
 	@Column(nullable = false)
@@ -114,7 +114,7 @@ public class Card implements Serializable{
 	}
 
 	public String getCvv() {
-		return cvv;
+		return generateCvv();
 	}
 
 	public void setCvv(String cvv) {
@@ -126,7 +126,7 @@ public class Card implements Serializable{
 	 * First digit is calculated with recursive sum from second sequence of four digits of card + month
 	 * Second digit is calculated with recursive sum from third sequence of four digits of card + year
 	 * Third digit is calculated with recursive sum from fourth sequence of four digits of card + month + year
-	 * @return
+	 * @return CVV String
 	 */
 	private String generateCvv() {
 		int month = cardValidity.getMonthValue();
