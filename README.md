@@ -8,68 +8,77 @@ A aplicação Wex Prepag é uma API onde é possível emitir cartões de forma s
 ### Criar Cartão
 
 POST /api/card
+
 Content-Type: application/json
-{
-	"name": "Layne Stanley",
-	"balance": 300
-}
+
+	{
+		"name": "Layne Stanley",
+		"balance": 300
+	}
 
 Endpoint para criar novos Cartões
 
 Response de exemplo
-{
-    "name": "Layne Stanley",
-    "number": "5447318541794326",
-    "validity": "08/21",
-    "password": "8011",
-    "balance": 300,
-    "cvv": "768"
-}
+
+	{
+	    "name": "Layne Stanley",
+	    "number": "5447318541794326",
+	    "validity": "08/21",
+	    "password": "8011",
+	    "balance": 300,
+	    "cvv": "768"
+	}
 
 ### Criar Autorização
 
 POST /api/authorize
+
 Content-Type: application/json
-{
-	"card": "5447318541794326",
-    "validity": "08/21",
-    "password": "8011",
-    "cvv": "768",
-    "store": "americanas",
-    "value": 200
-}
+
+	{
+	    "card": "5447318541794326",
+	    "validity": "08/21",
+	    "password": "8011",
+	    "cvv": "768",
+	    "store": "americanas",
+	    "value": 200
+	}
 
 Response de exemplo
-{
-    "code": "00",
-    "cardBalance": 167,
-    "message": null
-}
+
+	{
+	    "code": "00",
+	    "cardBalance": 167,
+	    "message": null
+	}
 
 ### Listar todos os cartões
 
 GET /api/cards
+
 Response example
-[
-    {
-        "id": 1,
-        "holderName": "Chris Cornell",
-        "cardNumber": "5447317206147840",
-        "cardValidity": "2021-08-20",
-        "cardPassword": "9211",
-        "cardBalance": 500
-    },
-    {
-        "id": 2,
-        "holderName": "Jerry Cantrell",
-        "cardNumber": "5447318541794326",
-        "cardValidity": "2021-08-20",
-        "cardPassword": "8011",
-        "cardBalance": 300
-    }
-]
+
+	[
+	    {
+		"id": 1,
+		"holderName": "Chris Cornell",
+		"cardNumber": "5447317206147840",
+		"cardValidity": "2021-08-20",
+		"cardPassword": "9211",
+		"cardBalance": 500
+	    },
+	    {
+		"id": 2,
+		"holderName": "Jerry Cantrell",
+		"cardNumber": "5447318541794326",
+		"cardValidity": "2021-08-20",
+		"cardPassword": "8011",
+		"cardBalance": 300
+	    }
+	]
 
 ## Como rodar este app incrível?
+
 Para executar a aplicação faça: 
 
 ### Antes de rodar a aplicação
@@ -80,12 +89,12 @@ Para executar a aplicação faça:
 
 ### Rodando a aplicação
 
-- mvn package
-- mvn spring-boot:run
+	mvn package
+	mvn spring-boot:run
 
 ## Como rodar os testes
 
-mvn test
+	mvn test
 
 ## Tech Stack
 
