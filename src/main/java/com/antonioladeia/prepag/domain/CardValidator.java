@@ -10,7 +10,7 @@ import com.antonioladeia.prepag.models.Card;
 */
 public class CardValidator {
 	
-	AuthorizationResponse validate(AuthorizationRequest request, Card card) {
+	public AuthorizationResponse validate(AuthorizationRequest request, Card card) {
 		if(cardNotExpired(request.getValidity(), card)) {
 			if(isValidCvv(request.getCvv(), card)) {
 				if(isValidPassword(request.getPassword(), card)) {
