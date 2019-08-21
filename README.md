@@ -7,16 +7,16 @@ A aplicação Wex Prepag é uma API onde é possível emitir cartões de forma s
 
 ### Criar Cartão
 
+Endpoint para criar novos Cartões
+
 POST /api/card
 
 Content-Type: application/json
 
 	{
-		"name": "Layne Stanley",
-		"balance": 300
+	    "name": "Layne Stanley",
+            "balance": 300
 	}
-
-Endpoint para criar novos Cartões
 
 Response de exemplo
 
@@ -56,7 +56,7 @@ Response de exemplo
 
 GET /api/cards
 
-Response example
+Response de exemplo
 
 	[
 	    {
@@ -79,13 +79,13 @@ Response example
 
 ## Como rodar este app incrível?
 
-Para executar a aplicação faça: 
+Para executar a aplicação siga estes passos: 
 
 ### Antes de rodar a aplicação
 
 - Criar banco de dados no postgres com o nome wexprepag;
-- Criar usuário *prepagdb* com senha *psipos81kr*
-- Dar permissão ao usuário no banco criado
+- Criar usuário *prepagdb* com senha *psipos81kr*;
+- Dar permissão ao usuário no banco criado.
 
 ### Rodando a aplicação
 
