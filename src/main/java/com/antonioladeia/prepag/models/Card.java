@@ -2,9 +2,6 @@ package com.antonioladeia.prepag.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.Month;
-import java.util.Calendar;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,11 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.data.annotation.Transient;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="TB_CARD")
@@ -27,7 +19,6 @@ public class Card implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonIgnore
 	private Long id;
 	
 	@Column(nullable = false)
@@ -37,7 +28,6 @@ public class Card implements Serializable{
 	private String cardNumber;
 	
 	@Column(nullable = false)
-	@JsonFormat(pattern = "MM/yy")
 	private LocalDate cardValidity;
 	
 	@Column(nullable = false)
@@ -84,5 +74,32 @@ public class Card implements Serializable{
 	public Double getCardBalance() {
 		return cardBalance;
 	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setHolderName(String holderName) {
+		this.holderName = holderName;
+	}
+
+	public void setCardValidity(LocalDate cardValidity) {
+		this.cardValidity = cardValidity;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public void setCardPassword(String cardPassword) {
+		this.cardPassword = cardPassword;
+	}
+
+	public void setCardBalance(Double cardBalance) {
+		this.cardBalance = cardBalance;
+	}
+	
+	
+	
 	
 }

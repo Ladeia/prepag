@@ -12,8 +12,6 @@ import com.antonioladeia.prepag.models.Card;
 
 public class CardEmitterTest {
 
-	private CardEmitter emitter = new CardEmitter();
-
 	@Test
 	public void generateCvvTest() {
 		Card card = new Card(
@@ -23,7 +21,7 @@ public class CardEmitterTest {
 				"1234", 
 				200.0
 		);
-		String cvv = emitter.generateCvv(card);
+		String cvv = CardEmitter.generateCvv(card);
 		
 		assertThat(cvv, is("444"));
 	}
@@ -37,7 +35,7 @@ public class CardEmitterTest {
 				"1234", 
 				200.0
 		);
-		String cvv = emitter.generateCvv(card);
+		String cvv = CardEmitter.generateCvv(card);
 		
 		assertThat(cvv, is("319"));
 	}

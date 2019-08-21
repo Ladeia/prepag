@@ -45,7 +45,7 @@ public class CardEmitter {
 	 * Third digit is calculated with recursive sum from fourth sequence of four digits of card + month + year
 	 * @return CVV String
 	 */
-	public String generateCvv(Card card) {
+	public static String generateCvv(Card card) {
 		int month = card.getCardValidity().getMonthValue();
 		int year = card.getCardValidity().getYear() % 100; // Year with 2 digits
 		
@@ -60,7 +60,7 @@ public class CardEmitter {
 		return digit01 + digit02 + digit03;
 	}
 	
-    private int sumDigits(int num) {
+    private static int sumDigits(int num) {
         int sum = 0;
         while (num > 0) {
             sum = sum + num % 10;
