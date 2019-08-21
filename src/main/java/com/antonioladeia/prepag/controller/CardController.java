@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.resources;
+package com.antonioladeia.prepag.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.antonioladeia.prepag.repository.AuthorizationRepository;
 import com.antonioladeia.prepag.repository.CardRepository;
+import com.antonioladeia.prepag.domain.CardEmitter;
+import com.antonioladeia.prepag.http.CardRequest;
 import com.antonioladeia.prepag.models.Authorization;
 import com.antonioladeia.prepag.models.Card;
 
 @RestController
 @RequestMapping(value="/api")
-public class CardResource {
+public class CardController {
 	
 	@Autowired
 	CardRepository cardRepository;
@@ -31,27 +33,25 @@ public class CardResource {
 	}
 	
 	@PostMapping("/card")
-	public Card createCard(@RequestBody Card card) {
-		card.setCardNumber(CardEmitter.generateCardNumber());
-		card.setCardValidity(CardEmitter.getValidity());
-		card.setCardPassword(CardEmitter.generatePassword());
+	public Card createCard(@RequestBody CardRequest cardRequest) {
+		Card card = CardEmitter.cardFactory(cardRequest);
 		return cardRepository.save(card);
 	}
 	
-	@PostMapping("/authorize")
-	public Authorization createAuthorize(@RequestBody Authorization auth) {
-		Card card = new Card();
-		card.setCardNumber(auth.getCardNumber());
-		card.setCardPassword(auth.getCardPassword());
-		card.setCvv(auth.getCvv());
-		
-		LocalDate dt = CardEmitter.createDateByString(auth.getCardValidity());
-		
-		card.setCardValidity(dt);
-		
-		auth.setCard(card);
-		
-		return authorizationRepository.save(auth);
-	}
+//	@PostMapping("/authorize")
+//	public Authorization createAuthorize(@RequestBody Authorization auth) {
+//		Card card = new Card();
+//		card.setCardNumber(auth.getCardNumber());
+//		card.setCardPassword(auth.getCardPassword());
+//		card.setCvv(auth.getCvv());
+//		
+//		LocalDate dt = CardEmitter.createDateByString(auth.getCardValidity());
+//		
+//		card.setCardValidity(dt);
+//		
+//		auth.setCard(card);
+//		
+//		return authorizationRepository.save(auth);
+//	}
 
 }

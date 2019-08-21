@@ -1,6 +1,6 @@
-package com.antonioladeia.prepag.resources;
+package com.antonioladeia.prepag.domain;
 
-import com.antonioladeia.prepag.models.AuthorizationResponse;
+import com.antonioladeia.prepag.http.AuthorizationResponse;
 import com.antonioladeia.prepag.models.Card;
 
 /** This class is responsible for validate a card

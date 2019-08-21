@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.models;
+package com.antonioladeia.prepag.http;
 
 import java.io.Serializable;
 
