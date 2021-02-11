@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.http;
+package card;
 
 import java.io.Serializable;
 

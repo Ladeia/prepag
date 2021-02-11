@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.models;
+package card;
 
 import java.io.Serializable;
 import java.time.LocalDate;

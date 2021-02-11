@@ -7,9 +7,10 @@ import java.time.LocalDate;
 
 import org.junit.Test;
 
-import com.antonioladeia.prepag.http.AuthorizationRequest;
-import com.antonioladeia.prepag.http.AuthorizationResponse;
-import com.antonioladeia.prepag.models.Card;
+import authorization.AuthorizationRequest;
+import authorization.AuthorizationResponse;
+import card.Card;
+import card.CardValidator;
 
 public class CardValidatorTest {
 

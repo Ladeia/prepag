@@ -1,9 +1,8 @@
-package com.antonioladeia.prepag.domain;
+package authorization;
 
-import com.antonioladeia.prepag.http.AuthorizationRequest;
-import com.antonioladeia.prepag.http.AuthorizationResponse;
-import com.antonioladeia.prepag.models.Card;
-import com.antonioladeia.prepag.repository.CardRepository;
+import card.Card;
+import card.CardRepository;
+import card.CardValidator;
 
 /** This class is responsible for the business rules 
  * of authorizing a sale authorization

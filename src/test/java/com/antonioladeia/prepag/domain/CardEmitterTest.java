@@ -3,12 +3,14 @@ package com.antonioladeia.prepag.domain;
 import java.time.LocalDate;
 
 import org.junit.Test;
+
+import card.Card;
+import card.CardEmitter;
+import card.CardRequest;
+
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.hamcrest.core.Is.is;
-
-import com.antonioladeia.prepag.http.CardRequest;
-import com.antonioladeia.prepag.models.Card;
 
 public class CardEmitterTest {
 

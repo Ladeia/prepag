@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.http;
+package authorization;
 
 import java.io.Serializable;
 

@@ -1,10 +1,8 @@
-package com.antonioladeia.prepag.http;
+package card;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import com.antonioladeia.prepag.domain.CardEmitter;
-import com.antonioladeia.prepag.models.Card;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class CardResponse implements Serializable {

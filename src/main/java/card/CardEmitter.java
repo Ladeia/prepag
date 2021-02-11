@@ -1,12 +1,9 @@
-package com.antonioladeia.prepag.domain;
+package card;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
-
-import com.antonioladeia.prepag.http.CardRequest;
-import com.antonioladeia.prepag.models.Card;
 
 /** This class is responsible for the
  * business rules of generating a new card

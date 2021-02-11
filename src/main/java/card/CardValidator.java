@@ -1,10 +1,9 @@
-package com.antonioladeia.prepag.domain;
+package card;
 
 import java.time.LocalDate;
 
-import com.antonioladeia.prepag.http.AuthorizationRequest;
-import com.antonioladeia.prepag.http.AuthorizationResponse;
-import com.antonioladeia.prepag.models.Card;
+import authorization.AuthorizationRequest;
+import authorization.AuthorizationResponse;
 
 /** This class is responsible for validate a card
 */
