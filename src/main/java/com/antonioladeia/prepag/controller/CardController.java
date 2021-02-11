@@ -22,8 +22,12 @@ import com.antonioladeia.prepag.models.Card;
 @RequestMapping(value="/api")
 public class CardController {
 
-	@Autowired
 	CardRepository cardRepository;
+	
+	@Autowired
+	public CardController(CardRepository cardRepository) {
+		this.cardRepository = cardRepository;
+	}
 	
 	@GetMapping("/cards")
 	public List<Card> listCards() {
