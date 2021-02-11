@@ -3,6 +3,7 @@ package authorization;
 import card.Card;
 import card.CardRepository;
 import card.CardValidator;
+import card.exception.CardNotExistsException;
 
 /** This class is responsible for the business rules 
  * of authorizing a sale authorization
@@ -26,15 +27,13 @@ public class SaleAuthorization {
 			
 			if(authResponse.getCode() == "00") {
 				Double balance = card.getCardBalance()-request.getValue();
-				// TODO Create a auth in db
 				
-				// TODO update card balance in DB
 				card.setCardBalance(balance);
 				cardRepository.save(card);
 				authResponse.setCardBalance(balance);
 			}
 		} else {
-			authResponse = new AuthorizationResponse("01", "Card not exists");
+			throw new CardNotExistsException();
 		}
 		
 		return authResponse;
