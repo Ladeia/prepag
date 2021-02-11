@@ -17,13 +17,13 @@ public class CardEmitterTest {
 		Card card = new Card(
 				"Layne Stanley", 
 				"5447317302648239", 
-				LocalDate.now(), 
+				LocalDate.of(2021, 01, 11), 
 				"1234", 
 				200.0
 		);
 		String cvv = CardEmitter.generateCvv(card);
 		
-		assertThat(cvv, is("444"));
+		assertThat(cvv, is("668"));
 	}
 	
 	@Test
@@ -31,13 +31,13 @@ public class CardEmitterTest {
 		Card card = new Card(
 				"Layne Stanley", 
 				"5447310000000000", 
-				LocalDate.now(), 
+				LocalDate.of(2021, 01, 11),  
 				"1234", 
 				200.0
 		);
 		String cvv = CardEmitter.generateCvv(card);
 		
-		assertThat(cvv, is("319"));
+		assertThat(cvv, is("534"));
 	}
 
 	@Test
