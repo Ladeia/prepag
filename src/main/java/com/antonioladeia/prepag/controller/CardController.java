@@ -30,7 +30,7 @@ public class CardController {
 		return cardRepository.findAll();
 	}
 	
-	@PostMapping("/card")
+	@PostMapping("/cards")
 	public CardResponse createCard(@RequestBody CardRequest cardRequest) {
 		Card card = CardEmitter.cardFactory(cardRequest);
 		cardRepository.save(card);
@@ -39,7 +39,7 @@ public class CardController {
 		return response.generateResponse(card);
 	}
 	
-	@PostMapping("/authorize")
+	@PostMapping("/authorizations")
 	public AuthorizationResponse createAuthorize(@RequestBody AuthorizationRequest request) {
 		SaleAuthorization authorization = new SaleAuthorization(cardRepository);
 		AuthorizationResponse response = authorization.authorize(request);
