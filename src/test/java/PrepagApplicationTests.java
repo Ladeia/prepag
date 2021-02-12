@@ -1,5 +1,3 @@
-package com.antonioladeia.prepag;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
@@ -10,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import prepag.PrepagApplication;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes=PrepagApplication.class)
 public class PrepagApplicationTests {
 
 	@Autowired

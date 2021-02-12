@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.domain;
+package domain;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

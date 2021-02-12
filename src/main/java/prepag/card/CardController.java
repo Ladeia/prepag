@@ -3,6 +3,7 @@ package prepag.card;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,8 +22,9 @@ public class CardController {
 	}
 	
 	@GetMapping("/cards")
-	public List<Card> listCards() {
-		return cardRepository.findAll();
+	public ResponseEntity listCards() {
+
+		return ResponseEntity.ok().body(cardRepository.findAll());
 	}
 	
 	@PostMapping("/cards")

@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag.domain;
+package domain;
 
 import java.time.LocalDate;
 
