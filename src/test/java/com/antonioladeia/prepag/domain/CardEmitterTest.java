@@ -4,9 +4,9 @@ import java.time.LocalDate;
 
 import org.junit.Test;
 
-import card.Card;
-import card.CardEmitter;
-import card.CardRequest;
+import prepag.card.Card;
+import prepag.card.CardEmitter;
+import prepag.card.CardRequest;
 
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;

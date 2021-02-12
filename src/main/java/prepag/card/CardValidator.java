@@ -1,11 +1,11 @@
-package card;
+package prepag.card;
 
 import java.time.LocalDate;
 
-import authorization.AuthorizationRequest;
-import authorization.AuthorizationResponse;
+import prepag.authorization.AuthorizationRequest;
+import prepag.authorization.AuthorizationResponse;
 
-/** This class is responsible for validate a card
+/** This class is responsible for validate a prepag.card
 */
 public class CardValidator {
 	
@@ -16,7 +16,7 @@ public class CardValidator {
 					if(hasLimit(request.getValue(), card)) {	
 						return new AuthorizationResponse("00", 0.0);
 					} else {
-						return new AuthorizationResponse("05", "Your card has no limit");
+						return new AuthorizationResponse("05", "Your prepag.card has no limit");
 					}
 				} else {
 					return new AuthorizationResponse("04", "Invalid password");

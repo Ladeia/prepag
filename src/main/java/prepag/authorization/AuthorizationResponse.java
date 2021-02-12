@@ -1,4 +1,4 @@
-package authorization;
+package prepag.authorization;
 
 import java.io.Serializable;
 
@@ -14,17 +14,17 @@ public class AuthorizationResponse implements Serializable {
 	private String message;
 	
 	// Constructor Region
-	/** Creates an AuthorizationResponse for success authorization.
-	 * @param code Code of authorization.
-	 * @param amount New limit of card.
+	/** Creates an AuthorizationResponse for success prepag.authorization.
+	 * @param code Code of prepag.authorization.
+	 * @param amount New limit of prepag.card.
 	*/
 	public AuthorizationResponse(String code, Double amount) {
 		this.code = code;
 		this.cardBalance = amount;
 	}
 	
-	/** Creates an AuthorizationResponse for failed authorization.
-	 * @param code Code of authorization.
+	/** Creates an AuthorizationResponse for failed prepag.authorization.
+	 * @param code Code of prepag.authorization.
 	 * @param message Message with failed description.
 	*/
 	public AuthorizationResponse(String code, String message) {

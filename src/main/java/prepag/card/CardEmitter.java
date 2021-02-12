@@ -1,4 +1,4 @@
-package card;
+package prepag.card;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 /** This class is responsible for the
- * business rules of generating a new card
+ * business rules of generating a new prepag.card
 */
 public class CardEmitter {
 
@@ -37,9 +37,9 @@ public class CardEmitter {
 	
 	/**
 	* Verification code is generated 
-	 * First digit is calculated with recursive sum from second sequence of four digits of card + month
-	 * Second digit is calculated with recursive sum from third sequence of four digits of card + year
-	 * Third digit is calculated with recursive sum from fourth sequence of four digits of card + month + year
+	 * First digit is calculated with recursive sum from second sequence of four digits of prepag.card + month
+	 * Second digit is calculated with recursive sum from third sequence of four digits of prepag.card + year
+	 * Third digit is calculated with recursive sum from fourth sequence of four digits of prepag.card + month + year
 	 * @return CVV String
 	 */
 	public static String generateCvv(Card card) {
@@ -68,9 +68,9 @@ public class CardEmitter {
         return sum;
     }
 
-	/** Factory method to create card.
-	 * @param card A card request params.
-	 * @return A full populated card.
+	/** Factory method to create prepag.card.
+	 * @param card A prepag.card request params.
+	 * @return A full populated prepag.card.
 	*/	
 	public static Card cardFactory(CardRequest cardRequest) {
 		Card card = new Card(

@@ -1,12 +1,12 @@
-package authorization;
+package prepag.authorization;
 
-import card.Card;
-import card.CardRepository;
-import card.CardValidator;
-import card.exception.CardNotExistsException;
+import prepag.card.Card;
+import prepag.card.CardRepository;
+import prepag.card.CardValidator;
+import prepag.card.exception.CardNotExistsException;
 
 /** This class is responsible for the business rules 
- * of authorizing a sale authorization
+ * of authorizing a sale prepag.authorization
 */
 public class SaleAuthorization {
 

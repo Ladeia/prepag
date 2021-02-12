@@ -1,4 +1,4 @@
-package card;
+package prepag.card;
 
 import java.io.Serializable;
 

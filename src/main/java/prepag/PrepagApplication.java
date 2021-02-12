@@ -1,4 +1,4 @@
-package com.antonioladeia.prepag;
+package prepag;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

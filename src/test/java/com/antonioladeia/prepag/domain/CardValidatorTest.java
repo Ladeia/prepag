@@ -7,10 +7,10 @@ import java.time.LocalDate;
 
 import org.junit.Test;
 
-import authorization.AuthorizationRequest;
-import authorization.AuthorizationResponse;
-import card.Card;
-import card.CardValidator;
+import prepag.authorization.AuthorizationRequest;
+import prepag.authorization.AuthorizationResponse;
+import prepag.card.Card;
+import prepag.card.CardValidator;
 
 public class CardValidatorTest {
 
@@ -108,7 +108,7 @@ public class CardValidatorTest {
 		request.setPassword("1234");
 		
 		AuthorizationResponse response = new AuthorizationResponse("05", 0.0);
-		response.setMessage("Your card has no limit");
+		response.setMessage("Your prepag.card has no limit");
 		
 		assertThat(response.getCode(), is(validator.validate(request, card).getCode()));
 		assertThat(response.getMessage(), is(validator.validate(request, card).getMessage()));

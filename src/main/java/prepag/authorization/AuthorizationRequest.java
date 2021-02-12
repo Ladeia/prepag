@@ -1,4 +1,4 @@
-package authorization;
+package prepag.authorization;
 
 import java.io.Serializable;
 

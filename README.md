@@ -9,7 +9,7 @@ A aplicação Wex Prepag é uma API onde é possível emitir cartões de forma s
 
 Endpoint para criar novos Cartões
 
-POST /api/card
+POST /api/prepag.card
 
 Content-Type: application/json
 
@@ -36,7 +36,7 @@ POST /api/authorize
 Content-Type: application/json
 
 	{
-	    "card": "5447318541794326",
+	    "prepag.card": "5447318541794326",
 	    "validity": "08/21",
 	    "password": "8011",
 	    "cvv": "768",
