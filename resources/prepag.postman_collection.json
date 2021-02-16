@@ -1,0 +1,92 @@
+{
+	"info": {
+		"name": "prepag",
+		"_postman_id": "b29019a3-5a61-fb4f-52f9-4d4487505fd0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List created cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cards"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Vanessa Santos\",\n\t\"balance\": \"190\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cards"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authorize a transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"card\": \"5447317861842332\",\n\t\"validity\": \"02/23\",\n\t\"cvv\": \"368\",\n\t\"store\": \"Posto ipyranga\",\n\t\"value\": \"32\",\n\t\"password\": \"4530\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authorizations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authorizations"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
